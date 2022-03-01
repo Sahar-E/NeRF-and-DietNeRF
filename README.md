@@ -177,3 +177,5 @@ For more videos, please check out the powerpoint presentation found in the link 
 ![phone](demo_videos/phone.gif)
 ![alexander](demo_videos/alexander.gif)
 ![drill](demo_videos/drill.gif)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
