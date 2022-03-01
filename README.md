@@ -105,7 +105,7 @@ You **can** set up your environment on your own without the docker supplementary
    ```sh
    git clone https://github.com/Sahar-E/NeRF_and_DietNeRF.git
    ```
-2. Setup venv / Use docker as an enviourment with the supplied Dockerfiles.
+2. Use docker as an enviourment with the supplied Dockerfiles / Setup venv your own venv.
 
 
 
