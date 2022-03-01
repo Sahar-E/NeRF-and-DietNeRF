@@ -1,4 +1,5 @@
-# NeRF_and_DietNeRF
+# NeRF and DietNeRF 
+## Introduction
 
 ![alexander](demo_videos/alexander.gif)
 ![gladiator_nerf](demo_videos/gladiator_nerf.gif)
