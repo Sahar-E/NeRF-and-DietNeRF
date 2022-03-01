@@ -167,12 +167,13 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 #  Demo Videos
 For more videos, please check out the powerpoint presentation found in the link above.
 
-![alexander_nerf](demo_videos/alexander_nerf.gif)
+
 ![drill_nerf](demo_videos/drill_nerf.gif)
+![alexander_nerf](demo_videos/alexander_nerf.gif)
+![gladiator_nerf](demo_videos/gladiator_nerf.gif)
 ![flowers](demo_videos/flowers.gif)
+![robot](demo_videos/robot.gif)
 ![gladiator](demo_videos/gladiator.gif)
 ![phone](demo_videos/phone.gif)
 ![alexander](demo_videos/alexander.gif)
-![gladiator_nerf](demo_videos/gladiator_nerf.gif)
 ![drill](demo_videos/drill.gif)
-![robot](demo_videos/robot.gif)
