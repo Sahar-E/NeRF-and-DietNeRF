@@ -1,0 +1,47 @@
+existing_save_dir_name: 256px_gladiator_7pics_l_to_r_angle1_save_dir_2
+starting_epoch_number: 99
+#existing_save_dir_name: null
+#starting_epoch_number: -1
+
+dataset_type: colmap
+dataset_location: Assets\GladiatorColmap\256px_7pics
+general_save_location: Results
+
+tasks_to_perform:
+  start_training: false
+  render_and_save_test_left_to_right_video: true
+  render_and_save_test_sphere_video: true
+  render_and_save_test_path_video: true
+  save_dataset_video: true
+  save_plots_video: true
+  create_plots_that_visualize_values_along_rays: true
+  create_plot_that_visualize_rendering_between_2_images: true
+
+neural_net:
+  type_of_model: NeRF
+  hidden_layer_dim: 256
+  last_hidden_layer_dim: 128
+  leaky_relu_alpha: 0.05
+  n_pos_enc_dim_xyz: 5
+  n_pos_enc_view_dir: 4
+  n_angles_for_model: 1
+  n_rays_in_batch_train: 2048
+  n_rays_in_batch_render: 16384
+
+render:
+  n_render_samples_coarse: 64
+  n_render_samples_fine: 128  
+  far_depth_render: 6.0
+  near_depth_render: 2.0
+
+training:
+  n_epochs: 100
+  optimizer_lr: 2.5e-04
+  test_img_idx: 0
+  idx_train_img_to_plot: 5
+
+video:
+  fps_plot_video: 5
+  fps_render_video: 60
+  fps_train_set_video: 5
+  img_indices_for_path_video: [16, 1, 16]

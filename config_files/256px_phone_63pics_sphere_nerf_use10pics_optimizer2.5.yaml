@@ -1,0 +1,49 @@
+#existing_save_dir_name: 256px_phone_11pics_sphere_nerf_save_dir_25
+#starting_epoch_number: 20
+existing_save_dir_name: null
+starting_epoch_number: -1
+
+dataset_type: colmap
+dataset_location: Assets\PhoneColmap\100px_63pics
+pics_indices_to_use_in_dataset: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+general_save_location: Results
+#google_cloud_bucket_name: gs://nerf_output
+
+tasks_to_perform:
+  start_training: true
+  render_and_save_test_left_to_right_video: true
+  render_and_save_test_sphere_video: true
+  render_and_save_test_path_video: true
+  save_dataset_video: true
+  save_plots_video: true
+  create_plots_that_visualize_values_along_rays: true
+  create_plot_that_visualize_rendering_between_2_images: true
+
+neural_net:
+  type_of_model: NeRF
+  hidden_layer_dim: 256
+  last_hidden_layer_dim: 128
+  leaky_relu_alpha: 0.05
+  n_pos_enc_dim_xyz: 5
+  n_pos_enc_view_dir: 4
+  n_angles_for_model: 2
+  n_rays_in_batch_train: 4096
+  n_rays_in_batch_render: 4096
+
+render:
+  n_render_samples_coarse: 64
+  n_render_samples_fine: 128
+  far_depth_render: 6.0
+  near_depth_render: 2.0
+
+training:
+  n_epochs: 100
+  optimizer_lr: 2.5e-04
+  test_img_idx: 0
+  idx_train_img_to_plot: 1
+
+video:
+  fps_plot_video: 5
+  fps_render_video: 60
+  fps_train_set_video: 5
+  img_indices_for_path_video: [0, 1, 2, 3, 4, 5, 6, 7]

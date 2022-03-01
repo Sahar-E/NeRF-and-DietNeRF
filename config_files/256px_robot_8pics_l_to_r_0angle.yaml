@@ -1,0 +1,47 @@
+#existing_save_dir_name: 256px_robot_8pics_l_to_r_save_dir_5
+#starting_epoch_number: 42
+existing_save_dir_name: null
+starting_epoch_number: -1
+
+dataset_type: blender
+dataset_location: Assets\RobotBlender\image_views_l_to_r\256px_8pics
+general_save_location: Results
+
+tasks_to_perform:
+  start_training: true
+  render_and_save_test_left_to_right_video: true
+  render_and_save_test_sphere_video: true
+  render_and_save_test_path_video: true
+  save_dataset_video: true
+  save_plots_video: true
+  create_plots_that_visualize_values_along_rays: true
+  create_plot_that_visualize_rendering_between_2_images: true
+
+neural_net:
+  type_of_model: NeRF
+  hidden_layer_dim: 256
+  last_hidden_layer_dim: 128
+  leaky_relu_alpha: 0.05
+  n_pos_enc_dim_xyz: 5
+  n_pos_enc_view_dir: 4
+  n_angles_for_model: 0
+  n_rays_in_batch_train: 2048
+  n_rays_in_batch_render: 16384
+
+render:
+  n_render_samples_coarse: 64
+  n_render_samples_fine: 128
+  far_depth_render: 6.0
+  near_depth_render: 1.0
+
+training:
+  n_epochs: 200  
+  optimizer_lr: 2.0e-04
+  test_img_idx: 3
+  idx_train_img_to_plot: 4
+
+video:
+  fps_plot_video: 5
+  fps_render_video: 60
+  fps_train_set_video: 5
+  img_indices_for_path_video: [ 0 ]
