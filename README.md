@@ -98,6 +98,7 @@ You **can** set up your environment on your own without the docker supplementary
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
 ### Installation
 
 1. Clone the repo
