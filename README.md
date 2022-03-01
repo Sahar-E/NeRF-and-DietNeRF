@@ -106,7 +106,7 @@ You **can** set up your environment on your own without the docker supplementary
    ```sh
    git clone https://github.com/Sahar-E/NeRF_and_DietNeRF.git
    ```
-2. Use docker as an enviourment with the supplied Dockerfiles / Setup venv your own venv.
+2. Use docker as an environment with the supplied Dockerfiles / Setup venv your own venv.
 
 
 
@@ -125,21 +125,28 @@ If you wish to use real images, you will need to create the poses_bounds.npy in 
 After that, it is the same as using the images with the cam_data.json file created by the blender python script in the project.
 
 
-### If you wish to use docker
+### If you wish to use docker as the environment
 1. Create an "environment" docker image using the Dockerfile in [contain_dockerfile_for_base_environment](https://github.com/Sahar-E/NeRF_and_DietNeRF/tree/main/contain_dockerfile_for_base_environment) directory.
-2. Then configure the name in the [Dockerfile](https://github.com/Sahar-E/NeRF_and_DietNeRF/blob/main/Dockerfile) at the root of the project, where the TODO note asks. 
 
-You can use the scipts in the [DatasetUtils](https://github.com/Sahar-E/NeRF_and_DietNeRF/tree/main/DatasetUtils) directory to create the blender pictures, resize the images and create jpgs from mp4 video file.
+### If you wish to deploy the docker in the Google Cloud Platform
+1. Create an "environment" docker image using the Dockerfile in [contain_dockerfile_for_base_environment](https://github.com/Sahar-E/NeRF_and_DietNeRF/tree/main/contain_dockerfile_for_base_environment) directory.
+2. Configure the name in the [Dockerfile](https://github.com/Sahar-E/NeRF_and_DietNeRF/blob/main/Dockerfile) at the root of the project, where the TODO note asks, and create the docker image.
+3. Deploy the docker image in GCP.
+4. Don't forget to set the Google's "Bucket" in the configuration file so it can sync the results into that bucket. 
 
-### blender_create_pictures.py:
+
+### You can use the scipts in the [DatasetUtils](https://github.com/Sahar-E/NeRF_and_DietNeRF/tree/main/DatasetUtils) directory to create the blender pictures, resize the images and create jpgs from mp4 video file:
+
+
+#### blender_create_pictures.py
 In the “DatasetUtils” you can find the script “blender_create_pictures.py” that can be opened in Blender and activated by it.
 This script will move the camera in the scene, render the images and write with them their needed metadata with poses data in a file called “cam_data.json”. 
 The folders that will be created are ready to go into the project.
 
-### resize_images.py
+#### resize_images.py
 Another script in the “DatasetUtils” is “resize_images.py” that resizes the images in a given directory to convenient sizes for testing the project, e.g. 50x50, 100x100, 256x256.
 
-### video2jpg.py
+#### video2jpg.py
 Also in “DatasetUtils”. Takes a video and break it up to jpg frames.
 
 
