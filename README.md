@@ -56,9 +56,9 @@ This project is my implementation and some elaborations that I did to the papers
 * Putting NeRF on a Diet: Semantically Consistent Few-Shot View Synthesis
 
 NeRF presents a method for synthesizing novel views of complex scenes by optimizing an underlying continuous volumetric scene function using a sparse set of input views.
-The algorithm represent a scene using a fully connected deep network, whose input is a single continuous 5D coordinate (spatial location (x, y, z), viewing direction (θ,Φ)) and outputs a is an emitted color (R, G, B) and volume density σ of that radiance.
+The algorithm represents a scene using a fully connected deep network, whose input is a single continuous 5D coordinate (the spatial location (x, y, z), viewing direction (θ,Φ)) and outputs a is an emitted color (R, G, B) and volume density σ of that radiance.
 
-DietNeRF introduce an auxiliary semantic consistency loss that encourages realistic rendering at novel poses. It improves fine details and the reconstructions of the scene.
+DietNeRF introduces an auxiliary semantic consistency loss that encourages realistic rendering at novel poses. It improves fine details and the reconstruction of the scene.
 
 In addition to implementing the ideas presented in the papers, I tested the importance of the "Viewing Directions" input to the model, created visualizations in the form of plots and videos, and implemented some methods that helped me in the creation of those visualizations. 
 For the creation of the rotations in the videos, I resorted to using quaternions.
