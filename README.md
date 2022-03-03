@@ -14,7 +14,7 @@
     <a href="https://docs.google.com/presentation/d/1UmV2SThbmKvED2VnMW6kPjI7N3OPRLIQ/edit?usp=sharing&ouid=102744995692215680419&rtpof=true&sd=true"><strong>Please explore the powerpoint presetation for more details »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/Sahar-E/NeRF_and_DietNeRF/tree/main/src">View src code</a>
+    <a href="https://github.com/Sahar-E/NeRF-and-DietNeRF/tree/main/src">View src code</a>
     ·
     <a href="https://arxiv.org/pdf/2003.08934.pdf">NeRF Paper</a>
     ·
@@ -55,6 +55,11 @@ This project is my implementation and some elaborations that I did to the papers
 * NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis
 * Putting NeRF on a Diet: Semantically Consistent Few-Shot View Synthesis
 
+NeRF presents a method for synthesizing novel views of complex scenes by optimizing an underlying continuous volumetric scene function using a sparse set of input views.
+The algorithm represent a scene using a fully connected deep network, whose input is a single continuous 5D coordinate (spatial location (x, y, z), viewing direction (θ,Φ)) and outputs a is an emitted color (R, G, B) and volume density σ of that radiance.
+
+DietNeRF introduce an auxiliary semantic consistency loss that encourages realistic rendering at novel poses. It improves fine details and the reconstructions of the scene.
+
 In addition to implementing the ideas presented in the papers, I tested the importance of the "Viewing Directions" input to the model, created visualizations in the form of plots and videos, and implemented some methods that helped me in the creation of those visualizations. 
 For the creation of the rotations in the videos, I resorted to using quaternions.
 For more information, please look at the Powerpoint presentation.
@@ -71,16 +76,16 @@ This project is also [GCP](https://cloud.google.com/) (Google Cloud Platform) re
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
 
-* Create a config_file.yaml – Please follow an existing Yaml file for directions.
-  * In the Yaml you specify what actions you want to be done in that execution – Training a net, rendering a video, creating a specific plot with a model and more.
-* Put it in directory called “config_files”.
-* Write in main.py in the list of “config_list” the name of the config file.
-* Add to directory Assets the images and the file that holds the images poses. 
-* If the dataset was created with Blender, add the “cam_data.json” file to the same directory (A script that render images and create the json can be found in “DatasetUtils” directory).
-* If the dataset was created with real images, you can use COLMAP to provide the “poses_bounds.npy” the same way as detailed in LLFF (Local Light Field Fusion) project.
+
+1. Create a config_file.yaml – Please follow an existing Yaml file for directions.
+    1. In the Yaml you specify what actions you want to be done in that execution – Training a net, rendering a video, creating a specific plot with a model and more.
+2. Put it in directory called “config_files”.
+3. Write in main.py in the list of “config_list” the name of the config file.
+4. Add to directory Assets the images and the file that holds the images poses. 
+5. Add "camera poses" to the same directory of the images
+    1. If the dataset was created with Blender, add the “cam_data.json” file to the same directory (A script that render images and create the json can be found in “DatasetUtils” directory).
+    2. If the dataset was created with real images, you can use COLMAP to provide the “poses_bounds.npy” the same way as detailed in LLFF (Local Light Field Fusion) project.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -89,13 +94,15 @@ To get a local copy up and running follow these simple example steps.
 It may be helpful to set your environment with the supplied “Dockerfile” files.
 There is a docker for the basic environment, and one that wrap the project into an image ready to be deployed in GCP.
 
-You **can** set up your environment on your own without the docker supplementary files, and these are the important packages that I used:
+You **can** set up your environment on your own without the docker supplementary files. 
+
+These are the important packages that I used:
 * python3
 * numpy
 * numpy-quaternion
 * tensorflow-gpu
-* opencv
-
+* opencv-python
+* cloudpathlib[gs]
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -154,13 +161,6 @@ Also in “DatasetUtils”. Takes a video and break it up to jpg frames.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Citations
 
