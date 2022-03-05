@@ -111,7 +111,7 @@ These are the important packages that I used:
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/Sahar-E/NeRF_and_DietNeRF.git
+   git clone https://github.com/Sahar-E/NeRF-and-DietNeRF.git
    ```
 2. Use docker as an environment with the supplied Dockerfiles / Setup venv your own venv.
 
@@ -133,16 +133,16 @@ After that, it is the same as using the images with the cam_data.json file creat
 
 
 ### If you wish to use docker as the environment
-1. Create an "environment" docker image using the Dockerfile in [contain_dockerfile_for_base_environment](https://github.com/Sahar-E/NeRF_and_DietNeRF/tree/main/contain_dockerfile_for_base_environment) directory.
+1. Create an "environment" docker image using the Dockerfile in [contain_dockerfile_for_base_environment](https://github.com/Sahar-E/NeRF-and-DietNeRF/tree/main/contain_dockerfile_for_base_environment) directory.
 
 ### If you wish to deploy the docker in the Google Cloud Platform
-1. Create an "environment" docker image using the Dockerfile in [contain_dockerfile_for_base_environment](https://github.com/Sahar-E/NeRF_and_DietNeRF/tree/main/contain_dockerfile_for_base_environment) directory.
-2. Configure the name in the [Dockerfile](https://github.com/Sahar-E/NeRF_and_DietNeRF/blob/main/Dockerfile) at the root of the project, where the TODO note asks, and create the docker image.
+1. Create an "environment" docker image using the Dockerfile in [contain_dockerfile_for_base_environment](https://github.com/Sahar-E/NeRF-and-DietNeRF/tree/main/contain_dockerfile_for_base_environment) directory.
+2. Configure the name in the [Dockerfile](https://github.com/Sahar-E/NeRF-and-DietNeRF/blob/main/Dockerfile) at the root of the project, where the TODO note asks, and create the docker image.
 3. Deploy the docker image in GCP.
 4. Don't forget to set the Google's "Bucket" in the configuration file so it can sync the results into that bucket. 
 
 
-### You can use the scipts in the [DatasetUtils](https://github.com/Sahar-E/NeRF_and_DietNeRF/tree/main/DatasetUtils) directory to create the blender pictures, resize the images and create jpgs from mp4 video file:
+### You can use the scipts in the [DatasetUtils](https://github.com/Sahar-E/NeRF-and-DietNeRF/tree/main/DatasetUtils) directory to create the blender pictures, resize the images and create jpgs from mp4 video file:
 
 
 #### blender_create_pictures.py
