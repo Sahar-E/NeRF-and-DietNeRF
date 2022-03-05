@@ -61,7 +61,7 @@ The algorithm represents a scene using a fully connected deep network, whose inp
 DietNeRF introduces an auxiliary semantic consistency loss that encourages realistic rendering at novel poses. It improves fine details and the reconstruction of the scene.
 
 In addition to implementing the ideas presented in the papers, I tested the importance of the "Viewing Directions" input to the model, created visualizations in the form of plots and videos, and implemented some methods that helped me in the creation of those visualizations. 
-For the creation of the rotations in the videos, I resorted to using quaternions.
+For the calculations of the rotations in the videos, I used quaternions.
 For more information, please look at the Powerpoint presentation.
 
 
