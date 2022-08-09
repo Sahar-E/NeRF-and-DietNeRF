@@ -173,7 +173,7 @@ Also in “DatasetUtils”. Takes a video and break it up to jpg frames.
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 #  Demo Videos
-For more videos, please check out the powerpoint presentation found in the link above (The videos there are 60FPS). 
+For more videos, please check out the powerpoint presentation found in the link above (The videos there are 60FPS. I recommend entering "Slide Show" full screen mode. That way the videos will auto start in the presentation). 
 
 
 ![drill_nerf](demo_videos/drill_nerf.gif)
