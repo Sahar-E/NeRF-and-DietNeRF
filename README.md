@@ -11,7 +11,7 @@
   <p align="center">
     This project was created as part of a "Tutorial-Work" at the Hebrew University of Jerusalem.
     <br />
-    <a href="https://docs.google.com/presentation/d/1UmV2SThbmKvED2VnMW6kPjI7N3OPRLIQ/edit?usp=sharing&ouid=102744995692215680419&rtpof=true&sd=true"><strong>Please explore the powerpoint presetation for more details »</strong></a>
+    <a href="https://docs.google.com/presentation/d/e/2PACX-1vTn82d6wCRm_8VULagdx73I-NYTele5miHlF1lEguYB2I7Mx1WsvRH6nIQObdv7E2NxfU1aAQ9WW9xl/pub?start=false&loop=false&delayms=3000"><strong>Please explore the presentation for more details »</strong></a>
     <br />
     <br />
     <a href="https://github.com/Sahar-E/NeRF-and-DietNeRF/tree/main/src">View src code</a>
